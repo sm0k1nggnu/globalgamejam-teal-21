@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/waiting_for_the_sunrise-francis_v (online-audio-converter.com).wav-08c9debc4529e29619beb4597474ba3a.sample"
+
+[deps]
+
+source_file="res://music/waiting_for_the_sunrise-francis_v (online-audio-converter.com).wav"
+dest_files=[ "res://.import/waiting_for_the_sunrise-francis_v (online-audio-converter.com).wav-08c9debc4529e29619beb4597474ba3a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

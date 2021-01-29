@@ -1,0 +1,13 @@
+extends "ScrollMovement.gd"
+
+func _ready():
+	self.global_position.y = rand_range(100,500)
+
+
+func _physics_process(delta):
+	move()
+	
+func _on_Obstacle_body_entered(body):
+	if body.name == "Player":
+		queue_free()
+		Signals.emit_signal("killplayer")

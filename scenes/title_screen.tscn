@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://title screen/Title_test.png" type="Texture" id=1]
+[ext_resource path="res://music/waiting_for_the_sunrise-francis_v (online-audio-converter.com).wav" type="AudioStream" id=2]
+[ext_resource path="res://fonts/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://scenes/title_screen.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -12.0
+margin_bottom = 5.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -41.52
+autoplay = true
+
+[node name="Quit Game Button" type="ToolButton" parent="."]
+margin_left = 191.404
+margin_top = 393.311
+margin_right = 518.404
+margin_bottom = 454.311
+custom_fonts/font = SubResource( 1 )
+text = "Quit Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="New Game Button" type="ToolButton" parent="."]
+margin_left = 173.897
+margin_top = 315.116
+margin_right = 500.897
+margin_bottom = 376.116
+custom_fonts/font = SubResource( 1 )
+text = "New Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Quit Game Button" to="." method="_on_Quit_Game_Button_pressed"]
+[connection signal="pressed" from="New Game Button" to="." method="_on_New_Game_Button_pressed"]
