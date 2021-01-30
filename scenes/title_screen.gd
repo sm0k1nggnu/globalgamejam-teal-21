@@ -21,4 +21,4 @@ func _on_Quit_Game_Button_pressed():
 
 
 func _on_New_Game_Button_pressed():
-	get_tree().change_scene("res://scenes/Game.tscn")
+	get_tree().change_scene("res://scenes/StartScreen.tscn")

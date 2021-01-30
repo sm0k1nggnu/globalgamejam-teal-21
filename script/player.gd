@@ -23,7 +23,6 @@ onready var animation = $AnimatedSprite
 func _ready():
 	Signals.connect("killplayer",self,"killplayer")
 	Signals.connect("rewardplayer",self,"rewardplayer")
-	
 	animation.play("Run")
 
 func _physics_process(delta):
@@ -46,24 +45,15 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector2(0,-1))
 
 
-
-
-
 func _on_Area2D_body_entered(body):
 	if body is StaticBody2D:
-		print("Right")
 		can_jump = true
 		animation.play("run")
 
 
 func _on_Area2D_body_exited(body):
 	if body is StaticBody2D:
-		print("Left")
 		can_jump = false
-
-
-
-
 
 
 
@@ -72,5 +62,4 @@ func killplayer():
 	
 func rewardplayer(scoretoadd):
 	score+=scoretoadd
-	print(String(score))
 	Signals.emit_signal("updatescore",score)

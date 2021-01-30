@@ -8,5 +8,6 @@ func _on_Button_pressed():
 	print("re")
 	get_tree().reload_current_scene()
 
+
 func gameover():
 	self.show()

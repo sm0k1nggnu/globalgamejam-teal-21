@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/loop_waiting_for_the_sunrise-francis_v_testloop.wav-fc9c4d32c93057572808140026c0bb32.sample"
+
+[deps]
+
+source_file="res://music/loop_waiting_for_the_sunrise-francis_v_testloop.wav"
+dest_files=[ "res://.import/loop_waiting_for_the_sunrise-francis_v_testloop.wav-fc9c4d32c93057572808140026c0bb32.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

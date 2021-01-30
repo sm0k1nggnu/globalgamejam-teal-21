@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 
 Signals="*res://script/signals.gd"
 Globals="*res://globals.gd"
+Bgm="*res://scenes/BGM.tscn"
 
 [display]
 

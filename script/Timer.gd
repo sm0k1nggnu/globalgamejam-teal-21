@@ -1,7 +1,5 @@
 extends Timer
 
-var diff = 0
-var time = 1
 
 
 

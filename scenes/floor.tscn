@@ -18,19 +18,18 @@ void fragment() {
 [sub_resource type="ShaderMaterial" id=2]
 resource_local_to_scene = true
 shader = SubResource( 1 )
-shader_param/scroll_speed = 0.5
+shader_param/scroll_speed = 0.35
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 752.195, 42 )
+extents = Vector2( 752.195, 48.7502 )
 
 [node name="floor" type="Node2D"]
 
 [node name="scrolling_bg" parent="." instance=ExtResource( 1 )]
 material = SubResource( 2 )
-margin_left = -0.244995
-margin_top = -703.086
-margin_right = 1919.76
-margin_bottom = 376.914
+margin_top = -530.0
+margin_right = 1920.01
+margin_bottom = 550.0
 rect_scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 2 )
 

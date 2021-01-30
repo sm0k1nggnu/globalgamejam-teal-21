@@ -3,7 +3,7 @@
 [ext_resource path="res://script/spawner.gd" type="Script" id=1]
 [ext_resource path="res://scenes/clouds/cloud_1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/clouds/cloud_2.tscn" type="PackedScene" id=3]
-[ext_resource path="res://script/Timer.gd" type="Script" id=4]
+[ext_resource path="res://scenes/clouds/Timer_cloud.gd" type="Script" id=4]
 [ext_resource path="res://scenes/clouds/cloud_4.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/clouds/cloud_5.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/clouds/cloud_3.tscn" type="PackedScene" id=7]
@@ -16,5 +16,5 @@ scenes = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 7 ), ExtResource( 5 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 script = ExtResource( 4 )
-[connection signal="timeout" from="Timer" to="Timer" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="Timer" method="_on_Timer_timeout"]
