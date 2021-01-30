@@ -15,5 +15,4 @@ func updatescore(score):
 	
 func move():
 	self.position.x -= 6.3
-	print(scroll_speed)
-	
+

@@ -12,5 +12,5 @@ scenes = [ ExtResource( 3 ), ExtResource( 4 ) ]
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 script = ExtResource( 2 )
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer" to="Timer" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

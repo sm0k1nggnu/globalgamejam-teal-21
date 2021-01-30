@@ -2,7 +2,7 @@
 
 [ext_resource path="res://img/obstcl/ground/GOOD_GROUND_1.png" type="Texture" id=1]
 [ext_resource path="res://scenes/Pickup.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/ground/good.gd" type="Script" id=3]
+[ext_resource path="res://script/animate_sprite.gd" type="Script" id=3]
 [ext_resource path="res://img/obstcl/ground/GOOD_GROUND_2.png" type="Texture" id=4]
 [ext_resource path="res://img/obstcl/ground/GOOD_GROUND_4.png" type="Texture" id=5]
 [ext_resource path="res://img/obstcl/ground/GOOD_GROUND_3.png" type="Texture" id=6]

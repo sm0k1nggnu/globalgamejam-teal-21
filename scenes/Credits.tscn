@@ -1,0 +1,101 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://title screen/Teal_Title_new_woLogo.png" type="Texture" id=1]
+[ext_resource path="res://fonts/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://script/Credits.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_top = 6
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 18
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="Credits" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Label" parent="."]
+margin_left = 276.297
+margin_top = 65.0111
+margin_right = 521.297
+margin_bottom = 118.011
+custom_fonts/font = SubResource( 1 )
+text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits intern" type="Label" parent="."]
+margin_left = 236.681
+margin_top = 185.891
+margin_right = 581.681
+margin_bottom = 430.891
+custom_fonts/font = SubResource( 2 )
+text = "Professional Artists: 
+Jackyccino & TheElKjaro
+
+Wrting & Sound:
+Sm0k1nggnu
+
+Programming:
+Turbolu & AlmightyPhi"
+align = 1
+
+[node name="Credits extern" type="Label" parent="."]
+margin_left = 182.844
+margin_top = 495.026
+margin_right = 650.844
+margin_bottom = 660.026
+custom_fonts/font = SubResource( 3 )
+text = "Music used:
+\"Waiting For The Sunrise\" by Francis V.
+
+Sounds:
+\"Running, Snow, A.\" by InspectorJ
+
+Font:
+\"VCR OSD Mono\" by mrmanet"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back To Title" type="ToolButton" parent="."]
+margin_left = 290.518
+margin_top = 718.17
+margin_right = 536.518
+margin_bottom = 753.17
+custom_fonts/font = SubResource( 4 )
+text = "Back to Title"
+[connection signal="pressed" from="Back To Title" to="." method="_on_Back_To_Title_pressed"]

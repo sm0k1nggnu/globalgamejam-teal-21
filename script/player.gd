@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+
+var win = 0
 #var velocity = Vector2.ZERO
 
 #export var jump_velocity = 1000.0
@@ -14,14 +16,13 @@ var velocity = Vector2()
 export var gravity = 8
 
 
-var score = 0
-
 var can_jump: bool = true
 
 onready var animation = $AnimatedSprite
 
 func _ready():
 	Signals.connect("killplayer",self,"killplayer")
+	Signals.connect("end",self,"ending")
 	Signals.connect("rewardplayer",self,"rewardplayer")
 	animation.play("Run")
 
@@ -47,13 +48,28 @@ func _physics_process(delta):
 
 func _on_Area2D_body_entered(body):
 	if body is StaticBody2D:
-		can_jump = true
-		animation.play("run")
+		if win == 0:
+			can_jump = true
+			animation.play("run")
 
 
 func _on_Area2D_body_exited(body):
 	if body is StaticBody2D:
 		can_jump = false
+
+func ending():
+	win = 1
+	print("second")
+	animation.play("stop")
+	var t = Timer.new()
+	t.set_wait_time(3)
+	t.set_one_shot(true)
+	self.add_child(t)
+	t.start()
+	yield(t, "timeout")
+	t.queue_free()
+	Signals.emit_signal("final")
+
 
 
 
@@ -61,5 +77,6 @@ func killplayer():
 	queue_free()
 	
 func rewardplayer(scoretoadd):
-	score+=scoretoadd
-	Signals.emit_signal("updatescore",score)
+	Globals.score += scoretoadd
+	print(Globals.score)
+	Signals.emit_signal("updatescore",Globals.score)

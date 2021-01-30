@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://scenes/ground/sprite.gd" type="Script" id=1]
+[ext_resource path="res://script/animate_sprite.gd" type="Script" id=1]
 [ext_resource path="res://script/bad_fly.gd" type="Script" id=2]
 [ext_resource path="res://img/obstcl/fly/ENEMY_FLYING_1.png" type="Texture" id=3]
 [ext_resource path="res://img/obstcl/fly/ENEMY_FLYING_2.png" type="Texture" id=4]
@@ -25,7 +25,7 @@ script = ExtResource( 2 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
-frame = 1
+frame = 2
 speed_scale = 1.5
 playing = true
 script = ExtResource( 1 )
