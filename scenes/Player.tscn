@@ -1,10 +1,10 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://img/run_1.png" type="Texture" id=1]
+[ext_resource path="res://img/TEAL_JUMP1.png" type="Texture" id=1]
 [ext_resource path="res://img/TEAL_RUN2.png" type="Texture" id=2]
-[ext_resource path="res://img/run_3.png" type="Texture" id=3]
+[ext_resource path="res://img/TEAL_JUMP3.png" type="Texture" id=3]
 [ext_resource path="res://script/player.gd" type="Script" id=4]
-[ext_resource path="res://img/run_2.png" type="Texture" id=5]
+[ext_resource path="res://img/TEAL_JUMP5.png" type="Texture" id=5]
 [ext_resource path="res://img/TEAL_RUN1.png" type="Texture" id=6]
 [ext_resource path="res://img/TEAL_RUN3.png" type="Texture" id=7]
 [ext_resource path="res://img/TEAL_RUN4.png" type="Texture" id=8]
@@ -12,10 +12,15 @@
 [ext_resource path="res://img/TEAL_RUN6.png" type="Texture" id=10]
 [ext_resource path="res://img/TEAL_RUN8.png" type="Texture" id=11]
 [ext_resource path="res://img/TEAL_RUN7.png" type="Texture" id=12]
+[ext_resource path="res://img/TEAL_JUMP6.png" type="Texture" id=13]
+[ext_resource path="res://img/TEAL_JUMP7.png" type="Texture" id=14]
+[ext_resource path="res://img/TEAL_JUMP8.png" type="Texture" id=15]
+[ext_resource path="res://img/TEAL_JUMP2.png" type="Texture" id=16]
+[ext_resource path="res://img/TEAL_JUMP4.png" type="Texture" id=17]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 16 ), ExtResource( 3 ), ExtResource( 17 ), ExtResource( 5 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "jump",
 "speed": 5.0
@@ -23,6 +28,11 @@ animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "run",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "fall",
 "speed": 5.0
 } ]
 
@@ -40,9 +50,8 @@ script = ExtResource( 4 )
 position = Vector2( 3.72013, 3.77611 )
 scale = Vector2( 0.339283, 0.339283 )
 frames = SubResource( 1 )
-animation = "run"
+animation = "fall"
 frame = 1
-speed_scale = 2.0
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
