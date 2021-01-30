@@ -24,6 +24,12 @@ config/icon="res://icon.png"
 Signals="*res://script/signals.gd"
 Globals="*res://globals.gd"
 
+[display]
+
+window/size/width=1408
+window/size/height=792
+window/size/resizable=false
+
 [input]
 
 jump={
