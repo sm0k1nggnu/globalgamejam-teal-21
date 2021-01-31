@@ -1,7 +1,7 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://fonts/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://script/gameoverUI.gd" type="Script" id=2]
+[ext_resource path="res://script/gameoverUI_endless.gd" type="Script" id=2]
 [ext_resource path="res://script/endUI.gd" type="Script" id=3]
 [ext_resource path="res://script/ScoreUI.gd" type="Script" id=4]
 [ext_resource path="res://scenes/bg.tscn" type="PackedScene" id=5]
@@ -9,9 +9,8 @@
 [ext_resource path="res://scenes/cloud_Spawner.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/floor.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=9]
-[ext_resource path="res://scenes/fly/Spawner_fly.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/ground/Spawner_ground.tscn" type="PackedScene" id=11]
-[ext_resource path="res://scenes/end/Spawner_end.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/fly/Spawner_fly_endless.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/ground/Spawner_ground_endless.tscn" type="PackedScene" id=11]
 [ext_resource path="res://scenes/bg2.tscn" type="PackedScene" id=13]
 
 [sub_resource type="DynamicFont" id=1]
@@ -47,13 +46,10 @@ position = Vector2( 0.6709, 730.989 )
 position = Vector2( 92.7551, 701.24 )
 
 [node name="Spawner_fly" parent="." instance=ExtResource( 10 )]
-position = Vector2( 1800, 500 )
+position = Vector2( 1800, 0 )
 
 [node name="Spawner_ground" parent="." instance=ExtResource( 11 )]
-position = Vector2( 1500, 704 )
-
-[node name="Spawner_end" parent="." instance=ExtResource( 12 )]
-position = Vector2( 1800, 0 )
+position = Vector2( 1800, 700 )
 
 [node name="score" type="Control" parent="."]
 margin_left = 490.0
@@ -71,6 +67,17 @@ margin_right = 814.128
 margin_bottom = 37.7222
 custom_fonts/font = SubResource( 1 )
 text = "Found items:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Endless" type="Label" parent="score"]
+margin_left = -450.0
+margin_top = 15.722
+margin_right = -270.0
+margin_bottom = 62.722
+custom_fonts/font = SubResource( 1 )
+text = "Endless"
 __meta__ = {
 "_edit_use_anchors_": false
 }

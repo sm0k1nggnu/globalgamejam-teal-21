@@ -1,0 +1,161 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://img/Night.png" type="Texture" id=1]
+[ext_resource path="res://script/Game Over_endless.gd" type="Script" id=2]
+[ext_resource path="res://fonts/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://script/Score_End.gd" type="Script" id=4]
+[ext_resource path="res://scenes/Sleep.tscn" type="PackedScene" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_top = 7
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 25
+outline_size = 5
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 30
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="Game Over" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sleep" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1036.57, 506.381 )
+scale = Vector2( 2.28315, 2.28315 )
+frame = 12
+
+[node name="Game Over" type="Label" parent="."]
+margin_left = 242.454
+margin_top = 64.7548
+margin_right = 665.454
+margin_bottom = 135.755
+custom_fonts/font = SubResource( 1 )
+text = "Game Over"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="Label" parent="."]
+margin_left = 46.4116
+margin_top = 181.569
+margin_right = 872.412
+margin_bottom = 436.569
+custom_fonts/font = SubResource( 2 )
+text = "Oh no, Teal ran into a baddie! 
+That's gotta hurt!
+Fights make Teal tired. They have to sleep now.
+
+They'll try again tomorrow."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Items found" type="Label" parent="."]
+margin_left = 297.708
+margin_top = 418.494
+margin_right = 477.708
+margin_bottom = 440.494
+custom_fonts/font = SubResource( 3 )
+text = "Items found:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="RichTextLabel" parent="."]
+anchor_right = 0.007
+anchor_bottom = 0.025
+margin_left = 496.0
+margin_top = 417.0
+margin_right = 593.144
+margin_bottom = 437.2
+custom_fonts/normal_font = SubResource( 4 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Retry" type="ToolButton" parent="."]
+margin_left = 326.632
+margin_top = 562.688
+margin_right = 572.632
+margin_bottom = 597.688
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 5 )
+text = "Retry Endless"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="ToolButton" parent="."]
+margin_left = 372.916
+margin_top = 608.267
+margin_right = 510.916
+margin_bottom = 643.267
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 6 )
+text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="ToolButton" parent="."]
+margin_left = 401.92
+margin_top = 654.674
+margin_right = 485.92
+margin_bottom = 689.674
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 7 )
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Retry" to="." method="_on_Retry_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

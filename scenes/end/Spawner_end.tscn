@@ -9,7 +9,6 @@ script = ExtResource( 1 )
 scenes = [ ExtResource( 3 ) ]
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 20.0
 one_shot = true
 autostart = true
 script = ExtResource( 2 )

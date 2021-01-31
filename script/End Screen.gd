@@ -8,7 +8,8 @@ func _ready():
 
 
 func _on_Play_again_pressed():
-	get_tree().change_scene("res://scenes/Z_Game.tscn")
+	Globals.score = 0
+	get_tree().change_scene("res://scenes/Z_Endless.tscn")
 
 
 func _on_Credits_pressed():

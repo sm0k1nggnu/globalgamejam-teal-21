@@ -15,5 +15,5 @@ func _physics_process(delta):
 func _on_Obstacle_body_entered(body):
 	if body.name == "Player":
 		queue_free()
-		Signals.emit_signal("killplayer")
+		Signals.emit_signal("death")
 		print("ded")

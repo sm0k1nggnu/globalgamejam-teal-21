@@ -59,9 +59,9 @@ text = "Congratulations!
 Teal is reunited with their familiy 
 and brought back     items. 
 
-He looks tired though...
+They look tired though...
 Let's hope they don't oversleep. 
-Again."
+Again..."
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -79,12 +79,13 @@ __meta__ = {
 }
 
 [node name="Play again" type="ToolButton" parent="."]
-margin_left = 397.177
-margin_top = 555.642
-margin_right = 589.177
-margin_bottom = 590.642
+margin_left = 372.063
+margin_top = 555.576
+margin_right = 600.063
+margin_bottom = 590.576
+mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 3 )
-text = "Play again"
+text = "Play endless"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -94,6 +95,7 @@ margin_left = 419.525
 margin_top = 600.337
 margin_right = 557.525
 margin_bottom = 635.337
+mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 4 )
 text = "Credits"
 
@@ -102,6 +104,7 @@ margin_left = 445.596
 margin_top = 645.025
 margin_right = 529.596
 margin_bottom = 680.025
+mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 5 )
 text = "Quit"
 [connection signal="pressed" from="Play again" to="." method="_on_Play_again_pressed"]

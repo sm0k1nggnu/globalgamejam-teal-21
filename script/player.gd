@@ -22,6 +22,7 @@ onready var animation = $AnimatedSprite
 
 func _ready():
 	Signals.connect("killplayer",self,"killplayer")
+	Signals.connect("death",self,"killplayer")
 	Signals.connect("end",self,"ending")
 	Signals.connect("rewardplayer",self,"rewardplayer")
 	animation.play("Run")
@@ -59,7 +60,6 @@ func _on_Area2D_body_exited(body):
 
 func ending():
 	win = 1
-	print("second")
 	animation.play("stop")
 	var t = Timer.new()
 	t.set_wait_time(3)
@@ -78,5 +78,4 @@ func killplayer():
 	
 func rewardplayer(scoretoadd):
 	Globals.score += scoretoadd
-	print(Globals.score)
 	Signals.emit_signal("updatescore",Globals.score)

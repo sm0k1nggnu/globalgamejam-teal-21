@@ -18,7 +18,7 @@ func _ready():
 
 func _on_Retry_pressed():
 	Globals.score = 0
-	get_tree().change_scene("res://scenes/Z_Game.tscn")
+	get_tree().change_scene("res://scenes/Z_Endless.tscn")
 
 
 func _on_Quit_pressed():

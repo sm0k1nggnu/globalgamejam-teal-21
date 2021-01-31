@@ -5,4 +5,4 @@ func _ready():
 
 
 func gameover():
-	get_tree().change_scene("res://scenes/Game Over.tscn")
+	get_tree().change_scene("res://scenes/GameOver.tscn")

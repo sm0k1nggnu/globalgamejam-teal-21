@@ -9,6 +9,5 @@ func _physics_process(delta):
 func _on_Pickup_body_entered(body):
 	if body.name == "Player":
 		Signals.emit_signal("end")
-		print("first")
 		stop = 1
 		

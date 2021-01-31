@@ -96,6 +96,10 @@ margin_left = 290.518
 margin_top = 718.17
 margin_right = 536.518
 margin_bottom = 753.17
+mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 4 )
 text = "Back to Title"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Back To Title" to="." method="_on_Back_To_Title_pressed"]

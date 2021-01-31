@@ -20,6 +20,7 @@ font_data = ExtResource( 2 )
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+mouse_default_cursor_shape = 2
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -36,7 +37,7 @@ margin_top = 86.8907
 margin_right = 1019.59
 margin_bottom = 355.891
 custom_fonts/font = SubResource( 1 )
-text = "Teal overslept and their Nomad family is already gone. 
+text = "Teal overslept and their nomad family is already gone. 
 Where could they be?
 
 Help Teal get back to their family and collect
@@ -51,6 +52,7 @@ margin_left = 324.827
 margin_top = 387.536
 margin_right = 651.827
 margin_bottom = 448.536
+mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 2 )
 text = "Go hurry!"
 __meta__ = {
